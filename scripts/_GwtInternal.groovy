@@ -456,7 +456,7 @@ target (runCodeServer: "Runs the Super Dev Mode server.") {
     }
 
     def runClass = "com.google.gwt.dev.codeserver.CodeServer"
-    def modules = findModules("${basedir}/${gwtSrcPath}", false)
+    def modules = findModules("${basedir}/${gwtSrcPath}", true)
 
     gwtRunWithProps(runClass, [spawn: false, fork: true]) {
         if (argsMap["bindAddress"]) {
